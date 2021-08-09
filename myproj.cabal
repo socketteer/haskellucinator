@@ -26,6 +26,7 @@ source-repository head
 library
   exposed-modules:
       Lib
+      Zone
   other-modules:
       Paths_myproj
   hs-source-dirs:
