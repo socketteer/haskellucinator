@@ -1,15 +1,14 @@
 module Main where
 
 import Zone
+import Discrete
 
 import Graphics.Gloss
-    ( Display(InWindow) )
+    ( Display(InWindow), animate )
 
-import Graphics.Gloss.Raster.Field
-
-windowDisplay :: Display
-windowDisplay = InWindow "ZonePlate" (700, 700) (100, 100)
 
 main :: IO ()
---main = animateField (InWindow "ZonePlate" (700, 700) (100, 100)) (1, 1) (\t (x, y) -> phasePattern pinchZone t (x,y))
-main = animateField windowDisplay (1, 1) sourceZoom
+
+--main = rotatingVectorAnimation
+--main = zoneZoomAnimation
+main = cornuFiniteAliasing

@@ -25,7 +25,7 @@ source-repository head
 
 library
   exposed-modules:
-      Integral
+      Discrete
       Zone
   other-modules:
       Paths_haskellucinator
