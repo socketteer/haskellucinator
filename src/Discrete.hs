@@ -23,12 +23,12 @@ import Zone
 
 ------- Vectors / Points -------
 
--- | Rotate a vector in the x y plane  in ti (InWindow "Test" (700, 700) (100, 100))m
+-- | Rotate a vector in the x y plane by del
 rotateVector :: Float -> Float -> Vector -> Vector
 rotateVector t velocity (x, y) = let del = t * velocity 
                                  in (x * cos del - y * sin del, x * sin del + y * cos del) 
 
--- | Position of rotating vector at time t
+-- | Time-parameterized rotating vector in x y plane
 rotatingVector :: Float -> Float -> Vector
 rotatingVector t velocity = let phase = t * velocity
                             in (100 * cos phase, 100 * sin phase)
